@@ -12,7 +12,7 @@ chat.addEventListener('submit', event => {
   socket.emit('chat', Correo.value)
   socket.emit('chat', Input.value) 
   socket.emit("chat", date.toLocaleTimeString())
-   Input.value = ''
+  Input.value = ''
   Correo.value= ''
 
 })

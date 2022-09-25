@@ -39,7 +39,7 @@ router.get('/productos', async (req, res) => {
 });
 
 // endpoint de prueba
-router.get("/hbs", async (req, res) => {
+router.get("/form", async (req, res) => {
   try {
     const data = await constructor.getAll();
     console.log(data);

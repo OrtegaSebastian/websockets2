@@ -6,11 +6,10 @@ const port = process.env.PORT || 8080
 const io = require('socket.io')(server)
 
 
-
 app.use(express.json());
 app.use(express.static('views'))
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static(__dirname + "/public"));
 
 
 //HandleBars
@@ -19,6 +18,7 @@ const hbs = handlebars.engine({
   layoutsDir: __dirname + "/views",
 
 })
+
 app.engine("hbs", hbs);
 
 // configuraciones
